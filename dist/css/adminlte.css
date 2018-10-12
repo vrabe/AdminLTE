@@ -11597,7 +11597,7 @@ label:not(.form-check-label):not(.custom-file-label) {
   color: #6c757d;
 }
 
-.nav-pills .nav-link:not(.active):hover {
+.nav-pills .nav-link:not(.active):not(.dropdown-toggle):hover {
   color: #007bff;
 }
 
