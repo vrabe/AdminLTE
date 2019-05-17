@@ -1,6 +1,6 @@
 /*!
  * AdminLTE v3.0.0-beta.1 (https://adminlte.io)
- * Copyright 2014-2018 Abdullah Almsaeed <abdullah@almsaeedstudio.com>
+ * Copyright 2014-2019 Abdullah Almsaeed <abdullah@almsaeedstudio.com>
  * Licensed under MIT (https://github.com/almasaeed2010/AdminLTE/blob/master/LICENSE)
  */
 (function (global, factory) {
@@ -188,8 +188,8 @@ var Layout = function ($) {
   var JQUERY_NO_CONFLICT = $.fn[NAME];
 
   var Selector = {
-    SIDEBAR: '.main-sidebar',
     HEADER: '.main-header',
+    SIDEBAR: '.main-sidebar .sidebar',
     CONTENT: '.content-wrapper',
     CONTENT_HEADER: '.content-header',
     WRAPPER: '.wrapper',
@@ -227,10 +227,18 @@ var Layout = function ($) {
         footer: $(Selector.FOOTER).length ? $(Selector.FOOTER).outerHeight() : 0,
         sidebar: $(Selector.SIDEBAR).height()
       };
+      console.log(heights);
+
       var max = this._max(heights);
 
       $(Selector.CONTENT).css('min-height', max - heights.header - heights.footer);
       $(Selector.SIDEBAR).css('min-height', max - heights.header);
+
+      if (!$('body').hasClass(ClassName.LAYOUT_FIXED)) {
+        if (typeof $.fn.slimScroll !== 'undefined') {
+          $(Selector.SIDEBAR).slimScroll({ destroy: true }).slimScroll({ height: max - heights.header });
+        }
+      }
     };
 
     // Private
@@ -248,6 +256,8 @@ var Layout = function ($) {
       });
 
       $(window).resize(function () {
+        console.log('resized');
+
         _this.fixLayoutHeight();
       });
 

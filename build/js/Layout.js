@@ -21,8 +21,8 @@ const Layout = (($) => {
   }
 
   const Selector = {
-    SIDEBAR        : '.main-sidebar',
     HEADER         : '.main-header',
+    SIDEBAR        : '.main-sidebar .sidebar',
     CONTENT        : '.content-wrapper',
     CONTENT_HEADER : '.content-header',
     WRAPPER        : '.wrapper',
@@ -58,10 +58,20 @@ const Layout = (($) => {
         footer : $(Selector.FOOTER).length ? $(Selector.FOOTER).outerHeight() : 0,
         sidebar: $(Selector.SIDEBAR).height()
       }
-      const max     = this._max(heights)
+      
+      const max = this._max(heights)
 
       $(Selector.CONTENT).css('min-height', max - heights.header - heights.footer)
       $(Selector.SIDEBAR).css('min-height', max - heights.header)
+
+      if (!$('body').hasClass(ClassName.LAYOUT_FIXED)) {
+        if (typeof $.fn.slimScroll !== 'undefined') {
+          $(Selector.SIDEBAR)
+            .slimScroll({ destroy: true })
+            .slimScroll({ height: max - heights.header });
+        }
+      }
+
     }
 
     // Private
@@ -131,7 +141,7 @@ const Layout = (($) => {
 
   $.fn[NAME] = Layout._jQueryInterface
   $.fn[NAME].Constructor = Layout
-  $.fn[NAME].noConflict  = function () {
+  $.fn[NAME].noConflict = function () {
     $.fn[NAME] = JQUERY_NO_CONFLICT
     return Layout._jQueryInterface
   }
