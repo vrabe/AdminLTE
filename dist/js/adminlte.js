@@ -227,7 +227,6 @@ var Layout = function ($) {
         footer: $(Selector.FOOTER).length ? $(Selector.FOOTER).outerHeight() : 0,
         sidebar: $(Selector.SIDEBAR).height()
       };
-      console.log(heights);
 
       var max = this._max(heights);
 
@@ -256,8 +255,6 @@ var Layout = function ($) {
       });
 
       $(window).resize(function () {
-        console.log('resized');
-
         _this.fixLayoutHeight();
       });
 

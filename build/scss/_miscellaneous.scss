@@ -350,3 +350,24 @@ a.text-muted:hover {
 .flex-1 {
   flex: 1;
 }
+
+// Modals
+.modal-content {
+  &.bg-warning {
+    .modal-header,
+    .modal-footer {
+      border-color: $gray-800;
+    }
+  }
+}
+.modal-content {
+  &.bg-primary,
+  &.bg-secondary,
+  &.bg-info,
+  &.bg-danger,
+  &.bg-success, {
+    .close{
+      color: $white;
+    }
+  }
+}
