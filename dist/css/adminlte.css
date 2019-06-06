@@ -10073,7 +10073,7 @@ body,
   display: block;
 }
 
-.nav-sidebar .menu-open > .nav-link i.right {
+.nav-sidebar .menu-open > .nav-link svg.right {
   -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }

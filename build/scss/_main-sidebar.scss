@@ -85,7 +85,7 @@
     }
 
     > .nav-link {
-      i.right {
+      svg.right {
         @include rotate(-90deg);
       }
     }
@@ -100,7 +100,7 @@
       width: $sidebar-nav-icon-width;
       font-size: 1.2rem;
       margin-right: .2rem;
-      
+
       &.fa,
       &.fas,
       &.far,
@@ -171,5 +171,3 @@
     @include skin-light-sidebar($color)
   }
 }
-
-
