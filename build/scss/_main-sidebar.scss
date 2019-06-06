@@ -85,7 +85,7 @@
     }
 
     > .nav-link {
-      svg.right {
+      i.right, svg.right {
         @include rotate(-90deg);
       }
     }
