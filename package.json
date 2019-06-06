@@ -3,7 +3,7 @@
   "description": "Responsive open source admin dashboard and control panel.",
   "version": "3.0.0-beta.1",
   "license": "MIT",
-  "author": "Abdullah Almsaeed <abdullah@almsaeedstudio.com>",
+  "author": "Colorlib <http://colorlib.com>",
   "main": "dist/js/adminlte.min.js",
   "scripts": {
     "css": "npm-run-all --sequential css-compile css-prefix css-minify",
@@ -38,20 +38,21 @@
   "sass": "build/scss/AdminLTE.scss",
   "repository": {
     "type": "git",
-    "url": "git://github.com/almasaeed2010/AdminLTE.git"
+    "url": "git://github.com/ColorlibHQ/AdminLTE.git"
   },
   "bugs": {
-    "url": "https://github.com/almasaeed2010/AdminLTE/issues"
+    "url": "https://github.com/ColorlibHQ/AdminLTE/issues"
   },
   "dependencies": {
     "@ckeditor/ckeditor5-build-classic": "^1.0.0-beta.4",
+    "@fortawesome/fontawesome-free": "^5.8.2",
     "bootstrap": "^4.3.1",
     "chart.js": "^2.8.0",
     "datatables.net": "^1.10.19",
     "datatables.net-bs4": "^1.10.19",
-    "@fortawesome/fontawesome-free": "^5.8.2",
     "jquery": "^3.4.1",
     "jquery-ui": "^1.12.1",
+    "overlayscrollbars": "^1.7.1",
     "popper.js": "^1.15.0"
   },
   "peerDependencies": {
