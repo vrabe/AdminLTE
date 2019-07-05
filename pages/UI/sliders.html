@@ -12,9 +12,7 @@
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Ion Slider -->
-  <link rel="stylesheet" href="../../plugins/ionslider/ion.rangeSlider.css">
-  <!-- ion slider Nice -->
-  <link rel="stylesheet" href="../../plugins/ionslider/ion.rangeSlider.skinNice.css">
+  <link rel="stylesheet" href="../../plugins/ion-rangeslider/css/ion.rangeSlider.min.css">
   <!-- bootstrap slider -->
   <link rel="stylesheet" href="../../plugins/bootstrap-slider/css/bootstrap-slider.min.css">
   <!-- Theme style -->
@@ -326,7 +324,13 @@
               <li class="nav-item">
                 <a href="../UI/modals.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Modals</p>
+                  <p>Modals & Alerts</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../UI/navbar.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Navbar & Tabs</p>
                 </a>
               </li>
             </ul>
@@ -378,7 +382,13 @@
               <li class="nav-item">
                 <a href="../tables/data.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Data Tables</p>
+                  <p>DataTables</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../tables/jsgrid.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>jsGrid</p>
                 </a>
               </li>
             </ul>
@@ -444,6 +454,53 @@
                 </a>
               </li>
               <li class="nav-item">
+                <a href="../examples/e_commerce.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>E-commerce</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../examples/projects.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Projects</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../examples/project_add.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Project Add</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../examples/project_edit.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Project Edit</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../examples/project_detail.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Project Detail</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../examples/contacts.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Contacts</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon far fa-plus-square"></i>
+              <p>
+                Extras
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
                 <a href="../examples/login.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Login</p>
@@ -461,17 +518,12 @@
                   <p>Lockscreen</p>
                 </a>
               </li>
-            </ul>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-plus-square"></i>
-              <p>
-                Extras
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="../examples/legacy-user-menu.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Legacy User Menu</p>
+                </a>
+              </li>
               <li class="nav-item">
                 <a href="../examples/404.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
@@ -603,56 +655,80 @@
               <div class="card-body">
                 <div class="row margin">
                   <div class="col-sm-6">
-                    <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200"
+                    <div class="slider-red">
+                      <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200"
                            data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="horizontal"
-                           data-slider-selection="before" data-slider-tooltip="show" data-slider-id="red">
+                           data-slider-selection="before" data-slider-tooltip="show">
+                    </div>
 
-                    <p>data-slider-id="red"</p>
-                    <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200"
+                    <p>.slider-red input.slider</p>
+                    <div class="slider-blue">
+                      <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200"
                            data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="horizontal"
-                           data-slider-selection="before" data-slider-tooltip="show" data-slider-id="blue">
+                           data-slider-selection="before" data-slider-tooltip="show">
+                    </div>
 
-                    <p>data-slider-id="blue"</p>
-                    <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200"
+                    <p>.slider-blue input.slider</p>
+                    <div class="slider-green">
+                      <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200"
                            data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="horizontal"
-                           data-slider-selection="before" data-slider-tooltip="show" data-slider-id="green">
+                           data-slider-selection="before" data-slider-tooltip="show">
+                    </div>
 
-                    <p>data-slider-id="green"</p>
-                    <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200"
+                    <p>.slider-green input.slider</p>
+                    <div class="slider-yellow">
+                      <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200"
                            data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="horizontal"
-                           data-slider-selection="before" data-slider-tooltip="show" data-slider-id="yellow">
+                           data-slider-selection="before" data-slider-tooltip="show">
+                    </div>
 
-                    <p>data-slider-id="yellow"</p>
-                    <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200"
+                    <p>.slider-yellow input.slider</p>
+                    <div class="slider-teal">
+                      <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200"
                            data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="horizontal"
-                           data-slider-selection="before" data-slider-tooltip="show" data-slider-id="teal">
+                           data-slider-selection="before" data-slider-tooltip="show">
+                    </div>
 
-                    <p>data-slider-id="teal"</p>
-                    <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200"
+                    <p>.slider-teal input.slider</p>
+                    <div class="slider-purple">
+                      <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200"
                            data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="horizontal"
-                           data-slider-selection="before" data-slider-tooltip="show" data-slider-id="purple">
+                           data-slider-selection="before" data-slider-tooltip="show">
+                    </div>
 
-                    <p style="margin-top: 10px">data-slider-id="purple"</p>
+                    <p>.slider-purple input.slider</p>
                   </div>
-                  <div class="col-sm-6 text-center">
-                    <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200"
+                  <div class="col-sm-6 d-flex justify-content-center">
+                    <div class="slider-red mx-3">
+                      <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200"
                            data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="vertical"
-                           data-slider-selection="before" data-slider-tooltip="show" data-slider-id="red">
-                    <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200"
+                           data-slider-selection="before" data-slider-tooltip="show">
+                    </div>
+                    <div class="slider-blue mx-3">
+                      <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200"
                            data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="vertical"
-                           data-slider-selection="before" data-slider-tooltip="show" data-slider-id="blue">
-                    <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200"
+                           data-slider-selection="before" data-slider-tooltip="show">
+                    </div>
+                    <div class="slider-green mx-3">
+                      <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200"
                            data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="vertical"
-                           data-slider-selection="before" data-slider-tooltip="show" data-slider-id="green">
-                    <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200"
+                           data-slider-selection="before" data-slider-tooltip="show">
+                    </div>
+                    <div class="slider-yellow mx-3">
+                      <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200"
                            data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="vertical"
-                           data-slider-selection="before" data-slider-tooltip="show" data-slider-id="yellow">
-                    <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200"
+                           data-slider-selection="before" data-slider-tooltip="show">
+                    </div>
+                    <div class="slider-teal mx-3">
+                      <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200"
                            data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="vertical"
-                           data-slider-selection="before" data-slider-tooltip="show" data-slider-id="teal">
-                    <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200"
+                           data-slider-selection="before" data-slider-tooltip="show">
+                    </div>
+                    <div class="slider-purple mx-3">
+                      <input type="text" value="" class="slider form-control" data-slider-min="-200" data-slider-max="200"
                            data-slider-step="5" data-slider-value="[-100,100]" data-slider-orientation="vertical"
-                           data-slider-selection="before" data-slider-tooltip="show" data-slider-id="purple">
+                           data-slider-selection="before" data-slider-tooltip="show">
+                    </div>
                   </div>
                 </div>
               </div>
@@ -671,9 +747,9 @@
 
   <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
-      <b>Version</b> 3.0.0-beta.1
+      <b>Version</b> 3.0.0-beta.2
     </div>
-    <strong>Copyright &copy; 2014-2018 <a href="http://adminlte.io">AdminLTE.io</a>.</strong> All rights
+    <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong> All rights
     reserved.
   </footer>
 
@@ -696,7 +772,7 @@
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
 <!-- Ion Slider -->
-<script src="../../plugins/ionslider/ion.rangeSlider.min.js"></script>
+<script src="../../plugins/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
 <!-- Bootstrap slider -->
 <script src="../../plugins/bootstrap-slider/bootstrap-slider.min.js"></script>
 <script>

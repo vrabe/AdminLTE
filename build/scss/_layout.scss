@@ -1,7 +1,8 @@
 /*
- * Core: General Layout Style
- * -------------------------
+ * Core: Layout
+ * ------------
  */
+
 html,
 body,
 .wrapper {
@@ -18,10 +19,10 @@ body,
   }
 
   .layout-boxed & {
-    @include box-shadow(0 0 10px rgba(0, 0, 0, .3));
+    @include box-shadow(0 0 10px rgba($black, .3));
 
     &,
-    &:before {
+    &::before {
       margin: 0 auto;
       max-width: $boxed-layout-max-width;
     }
@@ -37,18 +38,21 @@ body,
     }
 
     .main-header {
-      position: fixed;
-      top: 0;
-      right: 0;
       left: 0;
+      position: fixed;
+      right: 0;
+      top: 0;
+      z-index: $zindex-main-sidebar - 1;
     }
   }
 
   .layout-footer-fixed & {
     .main-footer {
-      position: fixed;
       bottom: 0;
-      width: calc(100% - 250px);
+      left: 0;
+      position: fixed;
+      right: 0;
+      z-index: $zindex-main-sidebar - 1;
     }
   }
 
@@ -66,7 +70,7 @@ body,
       height: 33px;
     }
 
-    & .main-sidebar{
+    & .main-sidebar {
       display: none;
     }
 
@@ -94,7 +98,7 @@ body,
 
   @include media-breakpoint-down(sm) {
     &,
-    &:before {
+    &::before {
       margin-left: 0;
     }
   }
@@ -110,7 +114,7 @@ body,
 
 .main-sidebar {
   &,
-  &:before {
+  &::before {
     $local-sidebar-transition: margin-left $transition-speed $transition-fn, width $transition-speed $transition-fn;
     @include transition($local-sidebar-transition);
     width: $sidebar-width;
@@ -118,21 +122,21 @@ body,
 
   .sidebar-collapse & {
     &,
-    &:before {
+    &::before {
       margin-left: -$sidebar-width;
     }
   }
 
   @include media-breakpoint-down(sm) {
     &,
-    &:before {
-      box-shadow: none!important;
+    &::before {
+      box-shadow: none !important;
       margin-left: -$sidebar-width;
     }
 
     .sidebar-open & {
       &,
-      &:before {
+      &::before {
         margin-left: 0;
       }
     }
@@ -141,10 +145,10 @@ body,
 
 :not(.layout-fixed) {
   .main-sidebar {
-    position: absolute;
-    top: 0;
     height: inherit;
     min-height: 100%;
+    position: absolute;
+    top: 0;
   }
 }
 
@@ -152,14 +156,14 @@ body,
 
   &.sidebar-collapse {
     .brand-link {
-      $local-sidebar-transition: width $transition-speed $transition-fn;
-      @include transition($local-sidebar-transition);
-      width: $sidebar-mini-width;
       height: 57px;
+      transition: width $transition-speed $transition-fn;
+      width: $sidebar-mini-width;
     }
 
     .main-sidebar:hover {
       .brand-link {
+        transition: width $transition-speed $transition-fn;
         width: $sidebar-width;
       }
     }
@@ -170,11 +174,12 @@ body,
   }
 
   .brand-link {
-
+    overflow: hidden;
     position: fixed;
     top: 0;
-    z-index: $zindex-main-sidebar;
+    transition: width $transition-speed $transition-fn;
     width: $sidebar-width;
+    z-index: $zindex-main-sidebar + 1;
   }
 
   // Sidebar variants
@@ -191,21 +196,21 @@ body,
 
 .layout-fixed {
   .main-sidebar {
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
     bottom: 0;
     float: none;
-  } 
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+  }
 }
 
 
 .main-footer {
-  padding: $main-footer-padding;
-  color: #555;
-  border-top: $main-footer-border-top;
   background: $main-footer-bg;
+  border-top: $main-footer-border-top;
+  color: lighten($gray-700, 25%);
+  padding: $main-footer-padding;
 }
 
 .content-header {
@@ -215,11 +220,12 @@ body,
     font-size: 1.8rem;
     margin: 0;
   }
+
   .breadcrumb {
-    margin-bottom: 0;
-    padding: 0;
     background: transparent;
     line-height: 1.8rem;
+    margin-bottom: 0;
+    padding: 0;
   }
 }
 
@@ -227,6 +233,6 @@ body,
   .content-wrapper,
   .main-header,
   .main-footer {
-    transition: none!important;
+    transition: none !important;
   }
 }
