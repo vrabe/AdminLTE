@@ -205,7 +205,7 @@
         var heights = {
           window: $(window).height(),
           header: $(Selector.HEADER).outerHeight(),
-          footer: $(Selector.FOOTER).outerHeight(),
+          footer: $(Selector.FOOTER).length ? $(Selector.FOOTER).outerHeight() : 0,
           sidebar: $(Selector.SIDEBAR).height()
         };
 
@@ -328,20 +328,10 @@
     $.fn[NAME] = Layout._jQueryInterface;
     $.fn[NAME].Constructor = Layout;
 
-<<<<<<< HEAD
-    Layout.prototype.fixLayoutHeight = function fixLayoutHeight() {
-      var heights = {
-        window: $(window).height(),
-        header: $(Selector.HEADER).outerHeight(),
-        footer: $(Selector.FOOTER).length ? $(Selector.FOOTER).outerHeight() : 0,
-        sidebar: $(Selector.SIDEBAR).height()
-      };
-=======
     $.fn[NAME].noConflict = function () {
       $.fn[NAME] = JQUERY_NO_CONFLICT;
       return Layout._jQueryInterface;
     };
->>>>>>> v3-dev
 
     return Layout;
   }(jQuery);
