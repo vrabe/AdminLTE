@@ -319,7 +319,13 @@
               <li class="nav-item">
                 <a href="UI/modals.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Modals</p>
+                  <p>Modals & Alerts</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="UI/navbar.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Navbar & Tabs</p>
                 </a>
               </li>
             </ul>
@@ -371,7 +377,13 @@
               <li class="nav-item">
                 <a href="tables/data.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Data Tables</p>
+                  <p>DataTables</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="tables/jsgrid.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>jsGrid</p>
                 </a>
               </li>
             </ul>
@@ -437,6 +449,53 @@
                 </a>
               </li>
               <li class="nav-item">
+                <a href="examples/e_commerce.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>E-commerce</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="examples/projects.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Projects</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="examples/project_add.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Project Add</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="examples/project_edit.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Project Edit</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="examples/project_detail.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Project Detail</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="examples/contacts.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Contacts</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon far fa-plus-square"></i>
+              <p>
+                Extras
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
                 <a href="examples/login.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Login</p>
@@ -454,17 +513,12 @@
                   <p>Lockscreen</p>
                 </a>
               </li>
-            </ul>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-plus-square"></i>
-              <p>
-                Extras
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="examples/legacy-user-menu.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Legacy User Menu</p>
+                </a>
+              </li>
               <li class="nav-item">
                 <a href="examples/404.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
@@ -690,10 +744,10 @@
         <!-- /.row -->
 
         <!-- =========================================================== -->
-        <h5 class="mt-4 mb-2">Info Box With <code>bg-*-gradient</code></h5>
+        <h5 class="mt-4 mb-2">Info Box With <code>bg-gradient-*</code></h5>
         <div class="row">
           <div class="col-md-3 col-sm-6 col-12">
-            <div class="info-box bg-info-gradient">
+            <div class="info-box bg-gradient-info">
               <span class="info-box-icon"><i class="far fa-bookmark"></i></span>
 
               <div class="info-box-content">
@@ -713,7 +767,7 @@
           </div>
           <!-- /.col -->
           <div class="col-md-3 col-sm-6 col-12">
-            <div class="info-box bg-success-gradient">
+            <div class="info-box bg-gradient-success">
               <span class="info-box-icon"><i class="far fa-thumbs-up"></i></span>
 
               <div class="info-box-content">
@@ -733,7 +787,7 @@
           </div>
           <!-- /.col -->
           <div class="col-md-3 col-sm-6 col-12">
-            <div class="info-box bg-warning-gradient">
+            <div class="info-box bg-gradient-warning">
               <span class="info-box-icon"><i class="far fa-calendar-alt"></i></span>
 
               <div class="info-box-content">
@@ -753,7 +807,7 @@
           </div>
           <!-- /.col -->
           <div class="col-md-3 col-sm-6 col-12">
-            <div class="info-box bg-danger-gradient">
+            <div class="info-box bg-gradient-danger">
               <span class="info-box-icon"><i class="fas fa-comments"></i></span>
 
               <div class="info-box-content">
@@ -851,11 +905,61 @@
         </div>
         <!-- /.row -->
 
+        <!-- Small Box (Stat card) -->
+        <div class="row">
+          <div class="col-lg-3 col-6">
+            <!-- small card -->
+            <div class="small-box bg-info">
+              <!-- Loading (remove the following to stop the loading)-->
+              <div class="overlay">
+                <i class="fas fa-3x fa-sync-alt"></i>
+              </div>
+              <!-- end loading -->
+              <div class="inner">
+                <h3>150</h3>
+
+                <p>New Orders</p>
+              </div>
+              <div class="icon">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+              <a href="#" class="small-box-footer">
+                More info <i class="fas fa-arrow-circle-right"></i>
+              </a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small card -->
+            <div class="small-box bg-success">
+              <!-- Loading (remove the following to stop the loading)-->
+              <div class="overlay dark">
+                <i class="fas fa-3x fa-sync-alt"></i>
+              </div>
+              <!-- end loading -->
+              <div class="inner">
+                <h3>53<sup style="font-size: 20px">%</sup></h3>
+
+                <p>Bounce Rate</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-stats-bars"></i>
+              </div>
+              <a href="#" class="small-box-footer">
+                More info <i class="fas fa-arrow-circle-right"></i>
+              </a>
+            </div>
+          </div>
+          <!-- ./col -->
+        </div>
+        <!-- /.row -->
+
         <!-- =========================================================== -->
         <h4 class="mb-2 mt-4">Cards</h4>
+        <h5 class="mb-2">Abilities</h5>
         <div class="row">
           <div class="col-md-3">
-            <div class="card card-default collapsed-card">
+            <div class="card card-primary collapsed-card">
               <div class="card-header">
                 <h3 class="card-title">Expandable</h3>
 
@@ -877,7 +981,156 @@
           <div class="col-md-3">
             <div class="card card-success">
               <div class="card-header">
+                <h3 class="card-title">Collapsable</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fas fa-minus"></i>
+                  </button>
+                </div>
+                <!-- /.card-tools -->
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                The body of the card
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+          <div class="col-md-3">
+            <div class="card card-warning">
+              <div class="card-header">
                 <h3 class="card-title">Removable</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-widget="remove"><i class="fas fa-times"></i>
+                  </button>
+                </div>
+                <!-- /.card-tools -->
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                The body of the card
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+          <div class="col-md-3">
+            <div class="card card-danger">
+              <div class="card-header">
+                <h3 class="card-title">Maximizable</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-widget="maximize"><i class="fas fa-expand"></i>
+                  </button>
+                </div>
+                <!-- /.card-tools -->
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                The body of the card
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">All together</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-widget="maximize"><i class="fas fa-expand"></i></button>
+                  <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fas fa-minus"></i></button>
+                  <button type="button" class="btn btn-tool" data-widget="remove"><i class="fas fa-times"></i></button>
+                </div>
+                <!-- /.card-tools -->
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                The body of the card
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+          <div class="col-md-3">
+            <div class="card card-success">
+              <div class="card-header">
+                <h3 class="card-title">Loading state</h3>
+              </div>
+              <div class="card-body">
+                The body of the card
+              </div>
+              <!-- /.card-body -->
+              <!-- Loading (remove the following to stop the loading)-->
+              <div class="overlay">
+                <i class="fas fa-2x fa-sync-alt"></i>
+              </div>
+              <!-- end loading -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+          <div class="col-md-3">
+            <div class="card card-warning">
+              <div class="card-header">
+                <h3 class="card-title">Loading state (dark)</h3>
+              </div>
+              <div class="card-body">
+                The body of the card
+              </div>
+              <!-- /.card-body -->
+              <!-- Loading (remove the following to stop the loading)-->
+              <div class="overlay dark">
+                <i class="fas fa-2x fa-sync-alt"></i>
+              </div>
+              <!-- end loading -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+
+        <!-- =========================================================== -->
+
+        <h5 class="mb-2">Colors Variations</h5>
+
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Primary Outline</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fas fa-minus"></i>
+                  </button>
+                </div>
+                <!-- /.card-tools -->
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                The body of the card
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+          <div class="col-md-3">
+            <div class="card card-success">
+              <div class="card-header">
+                <h3 class="card-title">Success Outline</h3>
 
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-widget="remove"><i class="fas fa-times"></i>
@@ -897,7 +1150,7 @@
           <div class="col-md-3">
             <div class="card card-warning">
               <div class="card-header">
-                <h3 class="card-title">Collapsable</h3>
+                <h3 class="card-title">Warning Outline</h3>
 
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fas fa-minus"></i>
@@ -917,34 +1170,27 @@
           <div class="col-md-3">
             <div class="card card-danger">
               <div class="card-header">
-                <h3 class="card-title">Loading state</h3>
+                <h3 class="card-title">Danger Outline</h3>
               </div>
               <div class="card-body">
                 The body of the card
               </div>
               <!-- /.card-body -->
-              <!-- Loading (remove the following to stop the loading)-->
-              <div class="overlay">
-                <i class="fas fa-sync-alt fa-spin"></i>
-              </div>
-              <!-- end loading -->
             </div>
             <!-- /.card -->
           </div>
           <!-- /.col -->
         </div>
         <!-- /.row -->
-
-        <!-- =========================================================== -->
 
         <div class="row">
           <div class="col-md-3">
-            <div class="card card-info collapsed-card cardutline">
+            <div class="card card-outline card-primary">
               <div class="card-header">
-                <h3 class="card-title">Expandable</h3>
+                <h3 class="card-title">Primary Outline</h3>
 
                 <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fas fa-plus"></i>
+                  <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fas fa-minus"></i>
                   </button>
                 </div>
                 <!-- /.card-tools -->
@@ -959,13 +1205,12 @@
           </div>
           <!-- /.col -->
           <div class="col-md-3">
-            <div class="card card-sucress cardutline">
+            <div class="card card-outline card-success">
               <div class="card-header">
-                <h3 class="card-title">Removable</h3>
+                <h3 class="card-title">Success Outline</h3>
 
                 <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-widget="remove">
-                    <i class="fas fa-times"></i>
+                  <button type="button" class="btn btn-tool" data-widget="remove"><i class="fas fa-times"></i>
                   </button>
                 </div>
                 <!-- /.card-tools -->
@@ -980,7 +1225,7 @@
           </div>
           <!-- /.col -->
           <div class="col-md-3">
-            <div class="card card-warring cardutline">
+            <div class="card card-outline card-warning">
               <div class="card-header">
                 <h3 class="card-title">Warning Outline</h3>
 
@@ -1000,7 +1245,7 @@
           </div>
           <!-- /.col -->
           <div class="col-md-3">
-            <div class="card card-darger cardutline">
+            <div class="card card-outline card-danger">
               <div class="card-header">
                 <h3 class="card-title">Danger Outline</h3>
               </div>
@@ -1015,11 +1260,86 @@
         </div>
         <!-- /.row -->
 
-        <!-- =========================================================== -->
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card bg-primary">
+              <div class="card-header">
+                <h3 class="card-title">Primary</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fas fa-minus"></i>
+                  </button>
+                </div>
+                <!-- /.card-tools -->
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                The body of the card
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+          <div class="col-md-3">
+            <div class="card bg-success">
+              <div class="card-header">
+                <h3 class="card-title">Success</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-widget="remove"><i class="fas fa-times"></i>
+                  </button>
+                </div>
+                <!-- /.card-tools -->
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                The body of the card
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+          <div class="col-md-3">
+            <div class="card bg-warning">
+              <div class="card-header">
+                <h3 class="card-title">Warning</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fas fa-minus"></i>
+                  </button>
+                </div>
+                <!-- /.card-tools -->
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                The body of the card
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+          <div class="col-md-3">
+            <div class="card bg-danger">
+              <div class="card-header">
+                <h3 class="card-title">Danger</h3>
+              </div>
+              <div class="card-body">
+                The body of the card
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
 
         <div class="row">
           <div class="col-md-3">
-            <div class="card bg-primary-gradient">
+            <div class="card bg-gradient-primary">
               <div class="card-header">
                 <h3 class="card-title">Primary Gradient</h3>
 
@@ -1039,7 +1359,7 @@
           </div>
           <!-- /.col -->
           <div class="col-md-3">
-            <div class="card bg-success-gradient">
+            <div class="card bg-gradient-success">
               <div class="card-header">
                 <h3 class="card-title">Success Gradient</h3>
 
@@ -1059,7 +1379,7 @@
           </div>
           <!-- /.col -->
           <div class="col-md-3">
-            <div class="card bg-warning-gradient">
+            <div class="card bg-gradient-warning">
               <div class="card-header">
                 <h3 class="card-title">Warning Gradient</h3>
 
@@ -1079,7 +1399,7 @@
           </div>
           <!-- /.col -->
           <div class="col-md-3">
-            <div class="card bg-danger-gradient">
+            <div class="card bg-gradient-danger">
               <div class="card-header">
                 <h3 class="card-title">Danger Gradient</h3>
               </div>
@@ -1808,9 +2128,9 @@
 
   <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
-      <b>Version</b> 3.0.0-beta.1
+      <b>Version</b> 3.0.0-beta.2
     </div>
-    <strong>Copyright &copy; 2014-2018 <a href="http://adminlte.io">AdminLTE.io</a>.</strong> All rights
+    <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong> All rights
     reserved.
   </footer>
 

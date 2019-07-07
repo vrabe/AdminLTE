@@ -10,10 +10,10 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- icheck bootstrap -->
+  <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
-  <!-- iCheck -->
-  <link rel="stylesheet" href="../../plugins/iCheck/square/blue.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
@@ -321,7 +321,13 @@
               <li class="nav-item">
                 <a href="../UI/modals.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Modals</p>
+                  <p>Modals & Alerts</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../UI/navbar.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Navbar & Tabs</p>
                 </a>
               </li>
             </ul>
@@ -373,7 +379,13 @@
               <li class="nav-item">
                 <a href="../tables/data.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Data Tables</p>
+                  <p>DataTables</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../tables/jsgrid.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>jsGrid</p>
                 </a>
               </li>
             </ul>
@@ -439,6 +451,53 @@
                 </a>
               </li>
               <li class="nav-item">
+                <a href="../examples/e_commerce.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>E-commerce</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../examples/projects.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Projects</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../examples/project_add.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Project Add</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../examples/project_edit.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Project Edit</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../examples/project_detail.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Project Detail</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../examples/contacts.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Contacts</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon far fa-plus-square"></i>
+              <p>
+                Extras
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
                 <a href="../examples/login.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Login</p>
@@ -456,17 +515,12 @@
                   <p>Lockscreen</p>
                 </a>
               </li>
-            </ul>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-plus-square"></i>
-              <p>
-                Extras
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="../examples/legacy-user-menu.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Legacy User Menu</p>
+                </a>
+              </li>
               <li class="nav-item">
                 <a href="../examples/404.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
@@ -673,7 +727,12 @@
                 <table class="table table-hover table-striped">
                   <tbody>
                   <tr>
-                    <td><input type="checkbox"></td>
+                    <td>
+                      <div class="icheck-primary">
+                        <input type="checkbox" value="" id="check1">
+                        <label for="check1"></label>
+                      </div>
+                    </td>
                     <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
                     <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
@@ -682,7 +741,12 @@
                     <td class="mailbox-date">5 mins ago</td>
                   </tr>
                   <tr>
-                    <td><input type="checkbox"></td>
+                    <td>
+                      <div class="icheck-primary">
+                        <input type="checkbox" value="" id="check2">
+                        <label for="check2"></label>
+                      </div>
+                    </td>
                     <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a></td>
                     <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
@@ -691,7 +755,12 @@
                     <td class="mailbox-date">28 mins ago</td>
                   </tr>
                   <tr>
-                    <td><input type="checkbox"></td>
+                    <td>
+                      <div class="icheck-primary">
+                        <input type="checkbox" value="" id="check3">
+                        <label for="check3"></label>
+                      </div>
+                    </td>
                     <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a></td>
                     <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
@@ -700,7 +769,12 @@
                     <td class="mailbox-date">11 hours ago</td>
                   </tr>
                   <tr>
-                    <td><input type="checkbox"></td>
+                    <td>
+                      <div class="icheck-primary">
+                        <input type="checkbox" value="" id="check4">
+                        <label for="check4"></label>
+                      </div>
+                    </td>
                     <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
                     <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
@@ -709,7 +783,12 @@
                     <td class="mailbox-date">15 hours ago</td>
                   </tr>
                   <tr>
-                    <td><input type="checkbox"></td>
+                    <td>
+                      <div class="icheck-primary">
+                        <input type="checkbox" value="" id="check5">
+                        <label for="check5"></label>
+                      </div>
+                    </td>
                     <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
                     <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
@@ -718,7 +797,12 @@
                     <td class="mailbox-date">Yesterday</td>
                   </tr>
                   <tr>
-                    <td><input type="checkbox"></td>
+                    <td>
+                      <div class="icheck-primary">
+                        <input type="checkbox" value="" id="check6">
+                        <label for="check6"></label>
+                      </div>
+                    </td>
                     <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a></td>
                     <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
@@ -727,7 +811,12 @@
                     <td class="mailbox-date">2 days ago</td>
                   </tr>
                   <tr>
-                    <td><input type="checkbox"></td>
+                    <td>
+                      <div class="icheck-primary">
+                        <input type="checkbox" value="" id="check7">
+                        <label for="check7"></label>
+                      </div>
+                    </td>
                     <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a></td>
                     <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
@@ -736,7 +825,12 @@
                     <td class="mailbox-date">2 days ago</td>
                   </tr>
                   <tr>
-                    <td><input type="checkbox"></td>
+                    <td>
+                      <div class="icheck-primary">
+                        <input type="checkbox" value="" id="check8">
+                        <label for="check8"></label>
+                      </div>
+                    </td>
                     <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
                     <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
@@ -745,7 +839,12 @@
                     <td class="mailbox-date">2 days ago</td>
                   </tr>
                   <tr>
-                    <td><input type="checkbox"></td>
+                    <td>
+                      <div class="icheck-primary">
+                        <input type="checkbox" value="" id="check9">
+                        <label for="check9"></label>
+                      </div>
+                    </td>
                     <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
                     <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
@@ -754,7 +853,12 @@
                     <td class="mailbox-date">2 days ago</td>
                   </tr>
                   <tr>
-                    <td><input type="checkbox"></td>
+                    <td>
+                      <div class="icheck-primary">
+                        <input type="checkbox" value="" id="check10">
+                        <label for="check10"></label>
+                      </div>
+                    </td>
                     <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a></td>
                     <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
@@ -763,7 +867,12 @@
                     <td class="mailbox-date">2 days ago</td>
                   </tr>
                   <tr>
-                    <td><input type="checkbox"></td>
+                    <td>
+                      <div class="icheck-primary">
+                        <input type="checkbox" value="" id="check11">
+                        <label for="check11"></label>
+                      </div>
+                    </td>
                     <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a></td>
                     <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
@@ -772,7 +881,12 @@
                     <td class="mailbox-date">4 days ago</td>
                   </tr>
                   <tr>
-                    <td><input type="checkbox"></td>
+                    <td>
+                      <div class="icheck-primary">
+                        <input type="checkbox" value="" id="check12">
+                        <label for="check12"></label>
+                      </div>
+                    </td>
                     <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
                     <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
@@ -781,7 +895,12 @@
                     <td class="mailbox-date">12 days ago</td>
                   </tr>
                   <tr>
-                    <td><input type="checkbox"></td>
+                    <td>
+                      <div class="icheck-primary">
+                        <input type="checkbox" value="" id="check13">
+                        <label for="check13"></label>
+                      </div>
+                    </td>
                     <td class="mailbox-star"><a href="#"><i class="fas fa-star-o text-warning"></i></a></td>
                     <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
@@ -790,7 +909,12 @@
                     <td class="mailbox-date">12 days ago</td>
                   </tr>
                   <tr>
-                    <td><input type="checkbox"></td>
+                    <td>
+                      <div class="icheck-primary">
+                        <input type="checkbox" value="" id="check14">
+                        <label for="check14"></label>
+                      </div>
+                    </td>
                     <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
                     <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
@@ -799,7 +923,12 @@
                     <td class="mailbox-date">14 days ago</td>
                   </tr>
                   <tr>
-                    <td><input type="checkbox"></td>
+                    <td>
+                      <div class="icheck-primary">
+                        <input type="checkbox" value="" id="check15">
+                        <label for="check15"></label>
+                      </div>
+                    </td>
                     <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
                     <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
                     <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
@@ -849,9 +978,9 @@
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
-      <b>Version</b> 3.0.0-beta.1
+      <b>Version</b> 3.0.0-beta.2
     </div>
-    <strong>Copyright &copy; 2014-2018 <a href="http://adminlte.io">AdminLTE.io</a>.</strong> All rights
+    <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong> All rights
     reserved.
   </footer>
 
@@ -871,28 +1000,19 @@
 <script src="../../plugins/fastclick/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="../../dist/js/adminlte.min.js"></script>
-<!-- iCheck -->
-<script src="../../plugins/iCheck/icheck.min.js"></script>
 <!-- Page Script -->
 <script>
   $(function () {
-    //Enable iCheck plugin for checkboxes
-    //iCheck for checkbox and radio inputs
-    $('.mailbox-messages input[type="checkbox"]').iCheck({
-      checkboxClass: 'icheckbox_flat-blue',
-      radioClass   : 'iradio_flat-blue'
-    })
-
     //Enable check and uncheck all functionality
     $('.checkbox-toggle').click(function () {
       var clicks = $(this).data('clicks')
       if (clicks) {
         //Uncheck all checkboxes
-        $('.mailbox-messages input[type=\'checkbox\']').iCheck('uncheck')
+        $('.mailbox-messages input[type=\'checkbox\']').prop('checked', false)
         $('.checkbox-toggle .far.fa-check-square').removeClass('fa-check-square').addClass('fa-square')
       } else {
         //Check all checkboxes
-        $('.mailbox-messages input[type=\'checkbox\']').iCheck('check')
+        $('.mailbox-messages input[type=\'checkbox\']').prop('checked', true)
         $('.checkbox-toggle .far.fa-square').removeClass('fa-square').addClass('fa-check-square')
       }
       $(this).data('clicks', !clicks)
