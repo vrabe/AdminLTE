@@ -218,7 +218,7 @@
         var heights = {
           window: $(window).height(),
           header: $(Selector.HEADER).outerHeight(),
-          footer: $(Selector.FOOTER).outerHeight(),
+          footer: $(Selector.FOOTER).length ? $(Selector.FOOTER).outerHeight() : 0,
           sidebar: $(Selector.SIDEBAR).height()
         };
 

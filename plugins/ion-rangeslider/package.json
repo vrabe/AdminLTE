@@ -2,7 +2,7 @@
   "_args": [
     [
       "ion-rangeslider@2.3.0",
-      "/Users/rejack/Projekte/GitHub/REJack/AdminLTE"
+      "/home/haseo/program/AdminLTE"
     ]
   ],
   "_from": "ion-rangeslider@2.3.0",
@@ -26,7 +26,7 @@
   ],
   "_resolved": "https://registry.npmjs.org/ion-rangeslider/-/ion-rangeslider-2.3.0.tgz",
   "_spec": "2.3.0",
-  "_where": "/Users/rejack/Projekte/GitHub/REJack/AdminLTE",
+  "_where": "/home/haseo/program/AdminLTE",
   "author": {
     "name": "Denis Ineshin",
     "email": "ionden.tech@gmail.com",
