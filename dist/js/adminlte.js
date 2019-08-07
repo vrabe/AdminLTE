@@ -29,6 +29,7 @@
       MAIN_HEADER: '.main-header'
     };
     var ClassName = {
+      CONTROL_SIDEBAR_ANIMATE: 'control-sidebar-animate',
       CONTROL_SIDEBAR_OPEN: 'control-sidebar-open',
       CONTROL_SIDEBAR_SLIDE: 'control-sidebar-slide-open'
     };
@@ -55,7 +56,12 @@
       _proto.show = function show() {
         // Show the control sidebar
         if (this._config.slide) {
-          $('body').removeClass(ClassName.CONTROL_SIDEBAR_SLIDE);
+          $('html').addClass(ClassName.CONTROL_SIDEBAR_ANIMATE);
+          $('body').removeClass(ClassName.CONTROL_SIDEBAR_SLIDE).delay(300).queue(function () {
+            $(Selector.CONTROL_SIDEBAR).hide();
+            $('html').removeClass(ClassName.CONTROL_SIDEBAR_ANIMATE);
+            $(this).dequeue();
+          });
         } else {
           $('body').removeClass(ClassName.CONTROL_SIDEBAR_OPEN);
         }
@@ -64,7 +70,14 @@
       _proto.collapse = function collapse() {
         // Collapse the control sidebar
         if (this._config.slide) {
-          $('body').addClass(ClassName.CONTROL_SIDEBAR_SLIDE);
+          $('html').addClass(ClassName.CONTROL_SIDEBAR_ANIMATE);
+          $(Selector.CONTROL_SIDEBAR).show().delay(100).queue(function () {
+            $('body').addClass(ClassName.CONTROL_SIDEBAR_SLIDE).delay(300).queue(function () {
+              $('html').removeClass(ClassName.CONTROL_SIDEBAR_ANIMATE);
+              $(this).dequeue();
+            });
+            $(this).dequeue();
+          });
         } else {
           $('body').addClass(ClassName.CONTROL_SIDEBAR_OPEN);
         }
@@ -240,20 +253,6 @@
           } else {
             $(Selector.CONTENT).css('min-height', heights.sidebar - heights.header);
           }
-        }
-
-        if ($('body').hasClass(ClassName.NAVBAR_FIXED)) {
-          $(Selector.BRAND).css('height', heights.header);
-          $(Selector.SIDEBAR).css('margin-top', heights.header);
-          $(Selector.SIDEBAR).css('margin-top', heights.header);
-        }
-
-        if ($('body').hasClass(ClassName.FOOTER_FIXED)) {
-          $(Selector.CONTENT).css('margin-bottom', heights.footer);
-        }
-
-        if ($('body').hasClass(ClassName.CONTENT_FIXED)) {
-          $(Selector.CONTENT).css('height', $(Selector.CONTENT).css('min-height'));
         }
       } // Private
       ;
@@ -681,6 +680,209 @@
 
   /**
    * --------------------------------------------
+   * AdminLTE DirectChat.js
+   * License MIT
+   * --------------------------------------------
+   */
+  var DirectChat = function ($) {
+    /**
+     * Constants
+     * ====================================================
+     */
+    var NAME = 'DirectChat';
+    var DATA_KEY = 'lte.directchat';
+    var JQUERY_NO_CONFLICT = $.fn[NAME];
+    var Selector = {
+      DATA_TOGGLE: '[data-widget="chat-pane-toggle"]',
+      DIRECT_CHAT: '.direct-chat'
+    };
+    var ClassName = {
+      DIRECT_CHAT_OPEN: 'direct-chat-contacts-open'
+    };
+    /**
+     * Class Definition
+     * ====================================================
+     */
+
+    var DirectChat =
+    /*#__PURE__*/
+    function () {
+      function DirectChat(element, config) {
+        this._element = element;
+      }
+
+      var _proto = DirectChat.prototype;
+
+      _proto.toggle = function toggle() {
+        $(this._element).parents(Selector.DIRECT_CHAT).first().toggleClass(ClassName.DIRECT_CHAT_OPEN);
+      } // Static
+      ;
+
+      DirectChat._jQueryInterface = function _jQueryInterface(config) {
+        return this.each(function () {
+          var data = $(this).data(DATA_KEY);
+
+          if (!data) {
+            data = new DirectChat($(this));
+            $(this).data(DATA_KEY, data);
+          }
+
+          data[config]();
+        });
+      };
+
+      return DirectChat;
+    }();
+    /**
+     *
+     * Data Api implementation
+     * ====================================================
+     */
+
+
+    $(document).on('click', Selector.DATA_TOGGLE, function (event) {
+      if (event) event.preventDefault();
+
+      DirectChat._jQueryInterface.call($(this), 'toggle');
+    });
+    /**
+     * jQuery API
+     * ====================================================
+     */
+
+    $.fn[NAME] = DirectChat._jQueryInterface;
+    $.fn[NAME].Constructor = DirectChat;
+
+    $.fn[NAME].noConflict = function () {
+      $.fn[NAME] = JQUERY_NO_CONFLICT;
+      return DirectChat._jQueryInterface;
+    };
+
+    return DirectChat;
+  }(jQuery);
+
+  /**
+   * --------------------------------------------
+   * AdminLTE TodoList.js
+   * License MIT
+   * --------------------------------------------
+   */
+  var TodoList = function ($) {
+    /**
+     * Constants
+     * ====================================================
+     */
+    var NAME = 'TodoList';
+    var DATA_KEY = 'lte.todolist';
+    var JQUERY_NO_CONFLICT = $.fn[NAME];
+    var Selector = {
+      DATA_TOGGLE: '[data-widget="todo-list"]'
+    };
+    var ClassName = {
+      TODO_LIST_DONE: 'done'
+    };
+    var Default = {
+      onCheck: function onCheck(item) {
+        return item;
+      },
+      onUnCheck: function onUnCheck(item) {
+        return item;
+      }
+      /**
+       * Class Definition
+       * ====================================================
+       */
+
+    };
+
+    var TodoList =
+    /*#__PURE__*/
+    function () {
+      function TodoList(element, config) {
+        this._config = config;
+        this._element = element;
+
+        this._init();
+      } // Public
+
+
+      var _proto = TodoList.prototype;
+
+      _proto.toggle = function toggle(item) {
+        item.parents('li').toggleClass(ClassName.TODO_LIST_DONE);
+
+        if (!$(item).prop('checked')) {
+          this.unCheck($(item));
+          return;
+        }
+
+        this.check(item);
+      };
+
+      _proto.check = function check(item) {
+        this._config.onCheck.call(item);
+      };
+
+      _proto.unCheck = function unCheck(item) {
+        this._config.onUnCheck.call(item);
+      } // Private
+      ;
+
+      _proto._init = function _init() {
+        var that = this;
+        $(Selector.DATA_TOGGLE).find('input:checkbox:checked').parents('li').toggleClass(ClassName.TODO_LIST_DONE);
+        $(Selector.DATA_TOGGLE).on('change', 'input:checkbox', function (event) {
+          that.toggle($(event.target));
+        });
+      } // Static
+      ;
+
+      TodoList._jQueryInterface = function _jQueryInterface(config) {
+        return this.each(function () {
+          var data = $(this).data(DATA_KEY);
+
+          var _config = $.extend({}, Default, $(this).data());
+
+          if (!data) {
+            data = new TodoList($(this), _config);
+            $(this).data(DATA_KEY, data);
+          }
+
+          if (config === 'init') {
+            data[config]();
+          }
+        });
+      };
+
+      return TodoList;
+    }();
+    /**
+     * Data API
+     * ====================================================
+     */
+
+
+    $(window).on('load', function () {
+      TodoList._jQueryInterface.call($(Selector.DATA_TOGGLE));
+    });
+    /**
+     * jQuery API
+     * ====================================================
+     */
+
+    $.fn[NAME] = TodoList._jQueryInterface;
+    $.fn[NAME].Constructor = TodoList;
+
+    $.fn[NAME].noConflict = function () {
+      $.fn[NAME] = JQUERY_NO_CONFLICT;
+      return TodoList._jQueryInterface;
+    };
+
+    return TodoList;
+  }(jQuery);
+
+  /**
+   * --------------------------------------------
    * AdminLTE Widget.js
    * License MIT
    * --------------------------------------------
@@ -849,7 +1051,7 @@
             $(this).data(DATA_KEY, typeof config === 'string' ? data : config);
           }
 
-          if (typeof config === 'string' && config.match(/remove|toggle/)) {
+          if (typeof config === 'string' && config.match(/collapse|expand|remove|toggle|toggleMaximize/)) {
             data[config]();
           } else if (typeof config === 'object') {
             data._init($(this));
@@ -903,8 +1105,10 @@
   }(jQuery);
 
   exports.ControlSidebar = ControlSidebar;
+  exports.DirectChat = DirectChat;
   exports.Layout = Layout;
   exports.PushMenu = PushMenu;
+  exports.TodoList = TodoList;
   exports.Treeview = Treeview;
   exports.Widget = Widget;
 
